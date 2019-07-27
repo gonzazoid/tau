@@ -5,7 +5,7 @@
   }
 
   function makeFunc(args, body){
-    return Array.isArray(body) ? {type: 'FDEF', match: body[1], closes: body[2]} : {type: 'FDEF', args, body};
+    return Array.isArray(body) ? {type: 'FDEF', args, match: body[1], closes: body[2]} : {type: 'FCOMP', args, body};
   }
 
   function makeClose(from, to){
